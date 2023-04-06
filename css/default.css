@@ -1,0 +1,174 @@
+/* ------------------------------- body ---------------------------------- */
+body {
+    margin: 0;
+    font-family:  Georgia, serif;
+    font-size: 1vw;
+
+    /* allows for responsive viewport without loosing formatting */
+    float: left;
+    min-width: 100%;
+}
+
+
+/* ------------------------------ header --------------------------------- */
+header {
+    background-color: #73c3d7;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 33vmax 33vmax 33vmax;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 4vw;
+    border-radius: 1vw;
+    margin: 1%;
+    margin-left: 2%;
+    margin-bottom: 0.5%;
+}
+
+header h1 {
+    text-align: center;  
+    font-size: 2.1em;
+    margin: 0;
+    color: #023349;
+    white-space: nowrap;
+}
+
+
+/*------------------------------ logo banner -------------------------------- */
+.logo-banner {
+    display: flex;
+    justify-content: center;
+    background-color: #023349;
+    width: 100%;
+}
+
+.logo-banner img{
+    width: 52vw;
+}
+
+
+/* ------------------------------- nav bar ---------------------------------- */
+nav {
+    background: #e0e0e0;
+    padding: 0 0.3vw;
+    font-size: 1.2em;
+    border: 0.3vw solid #73c3d7;
+    position: sticky;
+    z-index: 1;
+    top: 3.9vw;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li { 
+    padding: 0.3vw;
+    position: relative;
+    display: block;
+    width: auto;
+}
+
+nav li a {
+    color: #023349;
+    text-decoration: none;
+}
+
+nav li a:hover,
+nav li a:hover::after {
+    color: #73c3d7;
+}
+
+nav li a:active {
+    background-color: #da0041;
+}
+
+@media all and (max-width: 800px) {
+    nav li {
+        flex-flow: column wrap;
+        justify-content: space-around; 
+    }
+}
+
+@media all and (max-width:600px)  {
+    nav {
+        padding: 0;
+        position: static;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+        border: 0.1vw solid #73c3d7;
+        padding: 2vw;
+    }
+}
+
+
+/* ------------------------- image overlay and cta -------------------------- */
+.img-parent-with-overlay {
+    /* allows overlay elements to be positioned relative to the main section image */
+    position: relative;
+    max-width: 100%;
+    margin-top: 0;
+}
+
+.img-parent-with-overlay img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: rgba(23, 33, 49, 0.5); /* background colour with opacity */
+    color: #ffffff; /* colour of text */
+    width: 100%;
+    font-family:  Georgia, serif;
+    padding: 0.5vw 0;
+}
+
+.overlay-text h3 {
+    margin: 0;
+    margin-bottom: 0.3vw;
+    font-size: 2.1em;
+}
+
+.overlay-text h2 {
+    margin: 0;
+}
+
+.cta {
+    background: #da0041;
+    border-radius: 2em;
+    padding: 0.3vw;
+    padding-left: 0.7vw;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-top: 0.5vw;
+}
+
+
+/* --------------------------------- footer --------------------------------- */
