@@ -114,7 +114,8 @@ nav li a:hover::after {
     color: #73c3d7;
 }
 
-nav li a:active {
+nav li a:active,
+nav li a:active::after {
     background-color: #da0041;
 }
 
