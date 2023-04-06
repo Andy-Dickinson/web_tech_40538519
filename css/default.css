@@ -41,6 +41,21 @@ header h1 {
     white-space: nowrap;
 }
 
+@media all and (max-width: 600px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 10em;
+    }
+
+    header h1 {
+        font-size: 10em;
+    }
+}
+
 
 /*------------------------------ logo banner -------------------------------- */
 .logo-banner {
@@ -52,6 +67,12 @@ header h1 {
 
 .logo-banner img{
     width: 52vw;
+}
+
+@media all and (max-width: 600px){
+    .logo-banner img {
+        width: 100%;
+    }
 }
 
 
@@ -108,8 +129,10 @@ nav li a:active {
     nav {
         padding: 0;
         position: static;
-        font-size: 1.5em;
+        font-size: 7em;
         font-weight: bold;
+        position: sticky;
+        top: 11vw;
     }
 
     nav ul {
@@ -121,7 +144,7 @@ nav li a:active {
         width: 100%;
         text-align: center;
         border: 0.1vw solid #73c3d7;
-        padding: 2vw;
+        padding: 0.5vw;
     }
 }
 
@@ -168,6 +191,16 @@ nav li a:active {
     font-size: 1.5em;
     display: inline-block;
     margin-top: 0.5vw;
+}
+
+@media all and (max-width: 600px) {
+    .img-parent-with-overlay {
+        font-size: 3em;
+    }
+
+    .cta {
+        padding: 0.3em;
+    }
 }
 
 
