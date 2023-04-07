@@ -1,8 +1,11 @@
 /* ------------------------------- body ---------------------------------- */
+
 body {
     margin: 0;
-    font-family:  Georgia, serif;
+    font-family:  Georgia;
     font-size: 1vw;
+    background: #ededed;
+    color: #023349;
 
     /* allows for responsive viewport without loosing formatting */
     float: left;
@@ -11,21 +14,24 @@ body {
 
 
 /* ------------------------------ header --------------------------------- */
+
 header {
-    background-color: #73c3d7;
+    display: flex;
+    background: #73c3d7;
     width: 100%;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 33vmax 33vmax 33vmax;
     position: sticky;
     top: 0;
     z-index: 1;
-    margin: 0;
+    white-space: nowrap;
 }
 
-.logo {
-    display: inline-block;
+.header-box {
+    height: 1.3vw;
+    min-width: 33%;
+    flex-grow: 1;
+}
+
+.logo img {
     width: 4vw;
     border-radius: 1vw;
     margin: 1%;
@@ -34,30 +40,29 @@ header {
 }
 
 header h1 {
-    text-align: center;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2.1em;
-    margin: 0;
-    color: #023349;
-    white-space: nowrap;
 }
 
-@media all and (max-width: 600px) {
-    header {
-        display: flex;
-        justify-content: center;
-    }
 
-    .logo {
-        width: 10em;
+@media all and (max-width: 600px) {
+
+    .logo img {
+        width: 9em;
+        margin: 2%;
+        margin-left: 50%;
     }
 
     header h1 {
-        font-size: 10em;
+        font-size: 6em;
     }
 }
 
 
 /*------------------------------ logo banner -------------------------------- */
+
 .logo-banner {
     display: flex;
     justify-content: center;
@@ -77,6 +82,7 @@ header h1 {
 
 
 /* ------------------------------- nav bar ---------------------------------- */
+
 nav {
     background: #e0e0e0;
     padding: 0 0.3vw;
@@ -112,6 +118,7 @@ nav li a {
 nav li a:hover,
 nav li a:hover::after {
     color: #73c3d7;
+    text-decoration: underline;
 }
 
 nav li a:active,
@@ -133,7 +140,7 @@ nav li a:active::after {
         font-size: 7em;
         font-weight: bold;
         position: sticky;
-        top: 11vw;
+        top: 9vw;
     }
 
     nav ul {
@@ -151,6 +158,7 @@ nav li a:active::after {
 
 
 /* ------------------------- image overlay and cta -------------------------- */
+
 .img-parent-with-overlay {
     /* allows overlay elements to be positioned relative to the main section image */
     position: relative;
@@ -172,16 +180,23 @@ nav li a:active::after {
     width: 100%;
     font-family:  Georgia, serif;
     padding: 0.5vw 0;
+    height: 25%;
 }
 
-.overlay-text h3 {
+.overlay-text h2 {
     margin: 0;
     margin-bottom: 0.3vw;
     font-size: 2.1em;
 }
 
-.overlay-text h2 {
+.overlay-text h3 {
     margin: 0;
+}
+
+.home-container .img-parent-with-overlay:hover,
+.home-container .img-parent-with-overlay:hover::after {
+    background: #000;
+    opacity: 0.7;
 }
 
 .cta {
@@ -195,6 +210,10 @@ nav li a:active::after {
 }
 
 @media all and (max-width: 600px) {
+    .overlay-text {
+        height: 31%;
+    }
+
     .img-parent-with-overlay {
         font-size: 3em;
     }
@@ -205,4 +224,120 @@ nav li a:active::after {
 }
 
 
+/* ------------------------------ home-flexbox ------------------------------ */
+
+.home-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin:  5vw 0;
+    width: 100%;
+}
+
+.home-container .home-box {
+    width: 40%;
+}
+
+@media all and (max-width: 600px) {
+
+    .home-container {
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: 1.5vw 0;
+    }
+
+    .home-container .home-box{
+        width: 96%;
+        margin: 1vw 0;
+    }
+}
+
+
+
+/* -------------------------- home, popular recipes ------------------------- */
+
+.popular-recipes {
+    width: 100%;
+    text-align: center;
+}
+
+.popular-recipes h2 {
+    font-size: 1.8em;
+    margin-bottom: 0;
+}
+
+/* ----------------------------- container / box ---------------------------- */
+
+.container {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2.5vw;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.box {
+    flex: 1 1 0;
+    padding: 2%;
+}
+
+.box img {
+    height: 200px;
+}
+
+.box a{
+    text-decoration: none;
+    color: #023349;
+}
+
+.box h3 {
+    font-weight: normal;
+    font-size: 1.4em;
+    margin: 1%;
+}
+
+.box a img:hover,
+.box a img:hover::after {
+    opacity: 0.7;
+    background-color: #000;
+}
+
+
 /* --------------------------------- footer --------------------------------- */
+
+footer {
+    background: #023349;
+    color: #73c3d7;
+    height: 10vw;
+    padding: 1%;
+    text-align: center;
+    position: relative;
+}
+
+footer a {
+    color: #73c3d7;
+    display: inline-block;
+    padding: 2%;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+footer p {
+    position: absolute;
+    bottom: 3%;
+    left: 39%;
+}
+
+footer a:hover,
+footer a:hover::after {
+    text-decoration: underline;
+    color: #c2f0fc;
+}
+
+footer a:active,
+footer a:active::after {
+    background-color: #da0041;
+}

@@ -10,13 +10,13 @@
     <body>
 
         <header>
-            <img class="logo" src="img/logo-icon.png" alt="Logo" />
-            <h1>Culinary Code</h1>
-            <!-- <h1 class="slogan">If Hungry { Cook }</h1> -->
+            <div class="header-box logo"><img  src="img/logo/logo-icon.png" alt="Logo" /></div>
+            <h1 class="header-box">Culinary Code</h1>
+            <div class="header-box"></div>
         </header>
 
         <section class="logo-banner">
-            <img src="img/logo-square.png" alt="Logo banner">
+            <img src="img/logo/logo-square.png" alt="Logo-banner">
         </section>
 
         <nav>
@@ -29,48 +29,85 @@
             </ul>
         </nav>
 
-       
-        <main class="img-parent-with-overlay">
-            <a href="#">
-                <img src="img/recipe-of-the-week.jpg" alt="recipe of the week background image">
-            
-                <div class="overlay-text">
-                    <h3>Recipe of the week</h3>
-                    <h2>Name of recipe</h2>
-                    <span class="cta">Take a look ></span>
-                </div>
-            </a>
-        </main>
-
-        <aside class="img-parent-with-overlay">
-            <a href="#">
-                <img src="img/quiz-background.jpg" alt="quiz background image">
+        <div class="home-container">
+            <main class="img-parent-with-overlay home-box">
+                <a href="#">
+                    <img src="img/recipe/recipe-of-the-week.jpg" alt="recipe-of-the-week-background-image">
                 
-                <div class="overlay-text">
-                    <h3>Culinary quiz</h3>
-                    <span class="cta">Take the quiz</span>
-                </div>
-            </a>
-        </aside>
-        
+                    <div class="overlay-text">
+                        <h2>Recipe of the week</h2>
+                        <h3>Name of recipe</h3>
+                        <span class="cta">Take a look ></span>
+                    </div>
+                </a>
+            </main>
 
-        <section class="popular recipes">
+            <aside class="img-parent-with-overlay home-box">
+                <a href="#">
+                    <img src="img/recipe/quiz-background.jpg" alt="quiz-background-image">
+                    
+                    <div class="overlay-text">
+                        <h2>Culinary quiz</h2>
+                        <span class="cta">Take the quiz</span>
+                    </div>
+                </a>
+            </aside>
+        </div>
+
+        <section class="popular-recipes">
             <h2>Popular recipies</h2>
-            <ul>
-                <li>
-                    <img src="img/chinese-dumplings.jpg" alt="chinese dumplings">
+            <ul class="container">
+                <li class="box">
+                    <a href="#">
+                        <img src="img/recipe/dim-sum.jpg" alt="dim-sum">
+                        <h3>Dim-sum</h3>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/massaman.jpg" alt="massaman">
+                <li class="box">
+                    <a href="#">
+                        <img src="img/recipe/massaman.jpg" alt="massaman">
+                        <h3>Massaman</h3>
+                    </a>
                 </li>
-                <li>  
-                    <img src="img/pad-thai.jpg" alt="pad-thai">
+                <li class="box">  
+                    <a href="#">
+                        <img src="img/recipe/pad-thai.jpg" alt="pad-thai">
+                        <h3>Pad-Thai</h3>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/pizza.jpg" alt="pizza">
+                <li class="box">
+                    <a href="#">
+                        <img src="img/recipe/pizza.jpg" alt="pizza">
+                        <h3>Pizza</h3>
+                    </a>
                 </li>
+
+
+
+
+                <li class="box">
+                    <a href="#">
+                        <img src="img/recipe/dim-sum.jpg" alt="dim-sum">
+                        <h3>Dim-sum</h3>
+                    </a>
                 </li>
-                    <img src="img/steak-pie.jpg" alt="steak pie">
+                <li class="box">
+                    <a href="#">
+                        <img src="img/recipe/massaman.jpg" alt="massaman">
+                        <h3>Massaman</h3>
+                    </a>
+                </li>
+                <li class="box">  
+                    <a href="#">
+                        <img src="img/recipe/pad-thai.jpg" alt="pad-thai">
+                        <h3>Pad-Thai</h3>
+                    </a>
+                </li>
+                <li class="box">
+                    <a href="#">
+                        <img src="img/recipe/pizza.jpg" alt="pizza">
+                        <h3>Pizza</h3>
+                    </a>
                 </li>
             </ul>
         </section>
