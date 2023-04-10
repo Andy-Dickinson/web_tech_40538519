@@ -1,0 +1,70 @@
+{
+    "popular recipes":[
+        {
+            "name":"lamb-tikka-masala", "img-path":"/img/recipes/lamb-tikka-masala.jpg", "url":"/html/recipes/lamb-tikka-masala.html"
+        }
+    ],
+    "cuisine":[ 
+        {
+            "name":"Indian", "img-path":"/img/cuisines/indian.jpg", "url":"/html/cuisines/indian-cuisine.html"
+        }
+    ],
+    "courses":[
+        {
+            "name":"Dinner", "img-path":"/img/courses/dinner.jpg", "url":"/html/courses/dinner.html"
+        }
+
+    ],
+    "diet":[
+        {
+            "name":"Vegetarian", "img-path":"/img/diets/vegetarian.jpg", "url":"/html/diets/vegetarian.html"
+        },
+        {
+            "name":"Vegan", "img-path":"/img/diets/vegan.jpg", "url":"/html/diets/vegan.html"
+        }
+    ],
+    "recipes":[
+        {
+            "name":"lamb-tikka-masala", "img-path":"/img/recipes/lamb-tikka-masala.jpg", "url":"/html/recipes/lamb-tikka-masala.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "ingredients":{"scale-info":{"portions":4, "units":"metric", "course":"dinner"}, "ingredients":[{"quantity":3, "unit":"tsp", "name":"Cinnamon"}, {"quantity":5, "unit":"Tbsp", "name":"Cumin"}]}
+        }
+    ],
+    
+    
+    
+    
+    "old":[{
+        "popular recipes":[
+            {
+                "name":"lamb-tikka-masala", "img-path":"/img/recipe/lamb-tikka-masala.jpg", "url":"/html/recipes/lamb-tikka-masala.html"
+            }
+        ],
+        "cuisine":[ 
+            {
+                "name":"Indian", "img-path":"/img/cuisines/indian.jpg", "url":"/html/cuisines/indian-cuisine.html"
+            }
+        ],
+        "courses":[
+
+        ],
+        "diet":[
+
+        ],
+        "recipes":[
+            {
+                "name":"lamb-tikka-masala", "img-path":"/img/recipe/lamb-tikka-masala.jpg", "url":"/html/lamb-tikka-masala.html", "cuisine":"lamb-tikka-masala", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "portions":6, "units":"metric"
+            },
+            {
+                "name":"Pizza", "img-path":"/img/recipe/pizza.jpg", "url":"/html/pizza.html", "cuisine":"italian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "portions":6, "units":"metric"
+            },
+            {
+                "name":"Dim-Sum", "img-path":"/img/recipe/dim-sum.jpg", "url":"/html/dim-sum.html", "cuisine":"chinese", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "portions":6, "units":"metric"
+            },
+            {
+                "name":"Massaman", "img-path":"/img/recipe/massaman.jpg", "url":"/html/massaman.html", "cuisine":"thai", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "portions":6, "units":"metric"
+            },
+            {
+                "name":"Pad-Thai", "img-path":"/img/recipe/pad-thai.jpg", "url":"/html/pad-thai.html", "cuisine":"thai", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "portions":6, "units":"metric"
+            }
+        ]
+    }]
+}

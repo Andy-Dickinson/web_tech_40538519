@@ -6,10 +6,26 @@ body {
     font-size: 1vw;
     background: #ededed;
     color: #023349;
+    /* always shows scroll bar - stops header formatting changing between pages which 
+    overflow and cause the scroll bar to be present and going to pages which do not */
+    overflow-y: scroll;
 
     /* allows for responsive viewport without loosing formatting */
     float: left;
     min-width: 100%;
+}
+
+
+/* moves content down so as not to hide behind the fixed nav bar */
+.position-wrapper {
+    padding-top: 2.2vw;
+}
+
+@media all and (max-width:600px) {
+    
+    .position-wrapper {
+        padding-top: 28.9vw;
+    }
 }
 
 
@@ -32,30 +48,36 @@ header {
 }
 
 .logo img {
-    width: 4vw;
-    border-radius: 1vw;
-    margin: 1%;
+    width: 3.6vw;
+    margin: 0.6%;
     margin-left: 2%;
-    margin-bottom: 0.5%;
 }
 
-header h1 {
+.site-name {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.1em;
 }
 
+a.logo img:hover,
+a.logo img:hover::after {
+    opacity: 0.7;
+}
 
 @media all and (max-width: 600px) {
 
+    header {
+        height: 9.2em;
+    }
+
     .logo img {
-        width: 9em;
+        width: 8em;
         margin: 2%;
         margin-left: 50%;
     }
 
-    header h1 {
+    .site-name {
         font-size: 6em;
     }
 }
@@ -67,6 +89,7 @@ header h1 {
     display: flex;
     justify-content: center;
     background-color: #023349;
+    max-width: 100%;
     width: 100%;
 }
 
@@ -88,9 +111,15 @@ nav {
     padding: 0 0.3vw;
     font-size: 1.2em;
     border: 0.3vw solid #73c3d7;
-    position: sticky;
+    position: fixed;
     z-index: 1;
     top: 3.9vw;
+    right: 0;
+    left: 0;
+}
+
+.home-nav {
+    position: sticky;
 }
 
 nav ul {
@@ -137,10 +166,14 @@ nav li a:active::after {
     nav {
         padding: 0;
         position: static;
-        font-size: 7em;
+        font-size: 5em;
         font-weight: bold;
-        position: sticky;
+        position: fixed;
         top: 9vw;
+    }
+
+    .nav-home {
+        position: sticky;
     }
 
     nav ul {
@@ -157,7 +190,9 @@ nav li a:active::after {
 }
 
 
-/* ------------------------- image overlay and cta -------------------------- */
+
+
+/* ------------------------- image overlay (home page) and cta -------------------------- */
 
 .img-parent-with-overlay {
     /* allows overlay elements to be positioned relative to the main section image */
@@ -253,25 +288,29 @@ nav li a:active::after {
 
 
 
-/* -------------------------- home, popular recipes ------------------------- */
+/* ----------------------------- list-section ------------------------------ */
 
-.popular-recipes {
+#list-section {
     width: 100%;
     text-align: center;
 }
 
-.popular-recipes h2 {
+#list-section h2 {
     font-size: 1.8em;
     margin-bottom: 0;
 }
 
+#list-section p {
+    font-size: 1.5em;
+}
+
 @media all and (max-width: 600px) {
-    .popular-recipes h2 {
-        font-size: 7em;
+    #list-section h2, #list-section p {
+        font-size: 5em;
     }
 }
 
-/* ----------------------------- container / box ---------------------------- */
+/* ------------------------ container / box (list pages) -------------------- */
 
 .container {
     list-style-type: none;
@@ -318,12 +357,92 @@ nav li a:active::after {
 }
 
 
+/* --------------------------------- recipes -------------------------------- */
+
+
+.recipe {
+    width: 100%;
+    text-align: center;
+    /* font-size: 1.4em; */
+}
+
+.recipe h3 {
+    text-align: left;
+    margin-left: 4%;
+    font-size: 1.4em;
+}
+
+.method {
+    font-size: 1.4em;
+    text-align: left;
+    margin: 4% 5%;
+    margin-top: 0;
+}
+
+.recipe h2 {
+    margin-bottom: 0;
+}
+
+.recipe-img-description li img {
+    width: 100%;
+}
+
+.recipe-img-description {
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.recipe-img-description li {
+    flex: 1 1 0;
+    padding: 3%;
+}
+
+#portions {
+    margin: 2em;
+    position: relative;
+    bottom: 0.6%;
+}
+
+#description h4 {
+    margin: 0;
+}
+
+#ingredients {
+    text-align: left;
+    font-size: 1.4em;
+    margin-left: 4%;
+}
+
+@media all and (max-width: 600px) {
+    .recipe {
+        font-size: 3em;
+    }
+
+    .recipe h3 {
+        margin-left: 2.2%;
+    }
+
+    .recipe-img-description {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #ingredients{
+        margin-left: 0;
+    }
+}
+
+
 /* --------------------------------- footer --------------------------------- */
 
 footer {
     background: #023349;
     color: #73c3d7;
-    height: 10vw;
+    min-height: 10vw;
     padding: 0;
     text-align: center;
     position: relative;
