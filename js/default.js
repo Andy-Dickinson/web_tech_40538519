@@ -56,7 +56,7 @@ function create_clickable_img_list(list, path_index_directory, attribute, filter
     }
 }
 
-
+// Gets relevant list from local storage and turns into json obj
 function get_correct_list(list, attribute, filter) {
     var directory = JSON.parse(localStorage.getItem('directory'));
     var directory_list = directory[list];
@@ -90,14 +90,28 @@ function filter_list(directory_list, attribute, get) {
 }
 
 
-function set_recipe_information(name, course) {
+function set_recipe_of_the_week() {
+    var recipe = get_correct_list("recipe-of-the-week")[0];
+
+    document.getElementById("recipe-of-the-week-header").innerHTML = recipe["name"];
+    document.getElementById("recipe-of-the-week-anchor").setAttribute("href", recipe["url"]);
+    document.getElementById("recipe-of-the-week-img").setAttribute("src", recipe["img-path"]);
+}
+
+
+function set_recipe_information(name, path_index_directory) {
     var recipe = get_correct_list("recipes", "name", name)
 
-    // if recipe found, should be a list object with the recipe found
-    
+    if(path_index_directory == undefined){
+        path_index_directory = "";
+    }
+
+    // if recipe found, should be a json object with the recipe found
     if(recipe.length>0){
         // extracts recipe object 
         recipe = recipe[0];
+
+        document.getElementById("recipe-img").setAttribute("src", path_index_directory + recipe["img-path"]);
 
         // sets course displayed
         var course = recipe["ingredients"]["scale-info"]["course"];

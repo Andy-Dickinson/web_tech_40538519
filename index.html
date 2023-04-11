@@ -11,16 +11,16 @@
         <script src="js/read-json.js"></script>
         <script src="js/default.js"></script>
     </head>
-    <body onload="create_clickable_img_list('popular recipes');">
+    <body onload="create_clickable_img_list('popular recipes'); set_recipe_of_the_week();">
 
         <header>
-            <div class="header-box logo"><img  src="img/logo/logo-icon-circle.png" alt="Logo-icon" /></div>
+            <div class="header-box logo"><img  src="img/logo/logo-icon-circle.png" alt="Logo icon" /></div>
             <h1 class="header-box site-name">Culinary Code</h1>
             <div class="header-box"></div>
         </header>
 
         <section class="logo-banner">
-            <img src="img/logo/logo-square.png" alt="Logo-banner">
+            <img src="img/logo/logo-square.png" alt="Logo banner">
         </section>
 
         <nav class="home-nav">
@@ -35,12 +35,12 @@
 
         <div class="home-container">
             <main class="img-parent-with-overlay home-box">
-                <a href="html/recipes/lamb-tikka-masala.html">
-                    <img src="img/recipes/lamb-tikka-masala.jpg" alt="recipe-of-the-week-background-image">
+                <a id="recipe-of-the-week-anchor">
+                    <img id="recipe-of-the-week-img" alt="Recipe of the week background image">
                 
                     <div class="overlay-text">
                         <h2>Recipe of the week</h2>
-                        <h3>Lamb Tikka Masala</h3>
+                        <h3 id="recipe-of-the-week-header"></h3>
                         <span class="cta">Take a look ></span>
                     </div>
                 </a>
@@ -48,7 +48,7 @@
 
             <aside class="img-parent-with-overlay home-box">
                 <a href="#">
-                    <img src="img/quiz-background.jpg" alt="quiz-background-image">
+                    <img src="img/quiz-background.jpg" alt="quiz background image">
                     
                     <div class="overlay-text">
                         <h2>Culinary quiz</h2>
