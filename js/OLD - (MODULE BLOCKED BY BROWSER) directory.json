@@ -1,31 +1,31 @@
 {
     "popular recipes":[
         {
-            "name":"lamb-tikka-masala", "img-path":"/img/recipes/lamb-tikka-masala.jpg", "url":"/html/recipes/lamb-tikka-masala.html"
+            "name":"lamb-tikka-masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html"
         }
     ],
     "cuisine":[ 
         {
-            "name":"Indian", "img-path":"/img/cuisines/indian.jpg", "url":"/html/cuisines/indian-cuisine.html"
+            "name":"Indian", "img-path":"img/cuisines/indian.jpg", "url":"html/cuisines/indian-cuisine.html"
         }
     ],
     "courses":[
         {
-            "name":"Dinner", "img-path":"/img/courses/dinner.jpg", "url":"/html/courses/dinner.html"
+            "name":"Dinner", "img-path":"img/courses/dinner.jpg", "url":"html/courses/dinner.html"
         }
 
     ],
     "diet":[
         {
-            "name":"Vegetarian", "img-path":"/img/diets/vegetarian.jpg", "url":"/html/diets/vegetarian.html"
+            "name":"Vegetarian", "img-path":"img/diets/vegetarian.jpg", "url":"html/diets/vegetarian.html"
         },
         {
-            "name":"Vegan", "img-path":"/img/diets/vegan.jpg", "url":"/html/diets/vegan.html"
+            "name":"Vegan", "img-path":"img/diets/vegan.jpg", "url":"html/diets/vegan.html"
         }
     ],
     "recipes":[
         {
-            "name":"lamb-tikka-masala", "img-path":"/img/recipes/lamb-tikka-masala.jpg", "url":"/html/recipes/lamb-tikka-masala.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "ingredients":{"scale-info":{"portions":4, "units":"metric", "course":"dinner"}, "ingredients":[{"quantity":3, "unit":"tsp", "name":"Cinnamon"}, {"quantity":5, "unit":"Tbsp", "name":"Cumin"}]}
+            "name":"lamb-tikka-masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":30, "total-time":60, "ingredients":{"scale-info":{"portions":4, "units":"metric", "course":"dinner"}, "ingredients":[{"quantity":3, "unit":"tsp", "name":"Cinnamon"}, {"quantity":5, "unit":"Tbsp", "name":"Cumin"}]}
         }
     ],
     

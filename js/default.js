@@ -1,7 +1,11 @@
 /* Creates a list of clickable images from the list in directory.json file.
 Attribute and filter are optional parameters, if passed, will build from only those 
 items which have the attribute of value filter */
-function create_clickable_img_list(list, attribute, filter) {
+function create_clickable_img_list(list, path_index_directory, attribute, filter) { 
+    
+    if(path_index_directory == undefined){
+        path_index_directory = "";
+    }
 
     var directory_list = get_correct_list(list, attribute, filter);
 
@@ -25,10 +29,10 @@ function create_clickable_img_list(list, attribute, filter) {
             new_item_node.setAttribute("class", "box");
 
             var new_anchor_node = document.createElement("a");
-            new_anchor_node.setAttribute("href", directory_list[i]["url"]);
+            new_anchor_node.setAttribute("href", path_index_directory + directory_list[i]["url"]);
 
             var new_img_node = document.createElement("img");
-            new_img_node.setAttribute("src", directory_list[i]["img-path"]);
+            new_img_node.setAttribute("src", path_index_directory + directory_list[i]["img-path"]);
             var name = directory_list[i]["name"];
             name = name.charAt(0).toUpperCase() + name.slice(1);
             new_img_node.setAttribute("alt", name);
