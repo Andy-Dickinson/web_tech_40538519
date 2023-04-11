@@ -110,16 +110,24 @@ function set_recipe_information(name, path_index_directory) {
     if(recipe.length>0){
         // extracts recipe object 
         recipe = recipe[0];
+        var ingredients_info = recipe["ingredients-info"];
 
         document.getElementById("recipe-img").setAttribute("src", path_index_directory + recipe["img-path"]);
 
+        // sets units radio button
+        if(ingredients_info["scale-info"]["imperial"]){
+            document.getElementById("imperial").checked = true;
+        } else {
+            document.getElementById("metric").checked = true;
+        }
+
         // sets course displayed
-        var course = recipe["ingredients"]["scale-info"]["course"];
+        var course = ingredients_info["scale-info"]["course"];
         course = "Course: " + course[0].toUpperCase() + course.slice(1,);
         document.getElementById("course").innerHTML = course;
         
         // sets portion dropdown selected value
-        var portion = recipe["ingredients"]["scale-info"]["portions"];
+        var portion = ingredients_info["scale-info"]["portions"];
         document.getElementById("portions").value = portion;
 
         // sets times
@@ -135,10 +143,44 @@ function set_recipe_information(name, path_index_directory) {
         total.innerHTML = "Total time: " + recipe["total-time"];
         document.getElementById("description").appendChild(total);
 
-        var ingredients = recipe["ingredients"]["ingredients"];
+        var label_counter = ingredients_info["recipe_required"].length;
+
+        // Adds ingredients which comes from other recipes (styled differently)
+        for(var i=0; i<label_counter; i++) {
+            var other_recipe_info = ingredients_info["recipe_required"][i];
+
+            var recipe_ingredient = document.createElement("li");
+            var recipe_link = document.createElement("a");
+            recipe_link.setAttribute("href", path_index_directory + other_recipe_info["url"]);
+            recipe_link.setAttribute("class", "external");
+
+            var link_quantity = document.createElement("span");
+            link_quantity.setAttribute("id", "quantity" + i);
+            link_quantity.innerHTML = other_recipe_info["quantity"] + " ";
+            recipe_link.appendChild(link_quantity);
+
+            var link_unit = document.createElement("span");
+            link_unit.setAttribute("id", "unit" + i);
+            link_unit.innerHTML = other_recipe_info["unit"] + " ";
+            recipe_link.appendChild(link_unit);
+
+            var link_text = document.createElement("span");
+            link_text.setAttribute("id", "item" + i);
+            link_text.innerHTML = other_recipe_info["name"] + " - see link";
+            recipe_link.appendChild(link_text);
+
+            recipe_ingredient.appendChild(recipe_link);
+
+            document.getElementById("ingredients").appendChild(recipe_ingredient);
+        }
+        
+
+        var ingredients = ingredients_info["ingredients"];
 
         // adds all ingredients from json obj
         for(var i=0; i<ingredients.length; i++) {
+            label_counter++;
+
             var quantity = ingredients[i]["quantity"];
             var unit = ingredients[i]["unit"];
             var item = ingredients[i]["name"];
@@ -146,17 +188,17 @@ function set_recipe_information(name, path_index_directory) {
             var ingredient = document.createElement("li");
 
             var quantity_span = document.createElement("span");
-            quantity_span.setAttribute("class", "quantity " + i);
+            quantity_span.setAttribute("id", "quantity" + label_counter);
             quantity_span.innerHTML = quantity + " ";
             ingredient.appendChild(quantity_span);
 
             var unit_span = document.createElement("span");
-            unit_span.setAttribute("class", "unit " + i);
+            unit_span.setAttribute("id", "unit" + label_counter);
             unit_span.innerHTML = unit + " ";
             ingredient.appendChild(unit_span);
 
             var item_span = document.createElement("span");
-            item_span.setAttribute("class", "item " + i);
+            item_span.setAttribute("id", "item" + label_counter);
             item_span.innerHTML = item;
             ingredient.appendChild(item_span);
 

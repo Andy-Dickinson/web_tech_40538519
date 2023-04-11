@@ -19,12 +19,15 @@ body {
 /* moves content down so as not to hide behind the fixed nav bar */
 .position-wrapper {
     padding-top: 2.2vw;
+    line-height: 220%;
 }
 
 @media all and (max-width:600px) {
+
     
     .position-wrapper {
         padding-top: 28.9vw;
+        line-height: normal;
     }
 }
 
@@ -375,7 +378,7 @@ nav li a:active::after {
 .method {
     font-size: 1.4em;
     text-align: left;
-    margin: 4% 5%;
+    margin: 4%;
     margin-top: 0;
 }
 
@@ -392,13 +395,30 @@ nav li a:active::after {
     list-style-type: none;
     padding: 0;
     display: flex;
-    margin-top: 0;
+    margin: 0;
     font-size: 1.4em;
 }
 
 .recipe-img-description li {
     flex: 1 1 0;
     padding: 3%;
+}
+
+.external {
+    text-decoration: none;
+    color: #da0041;
+}
+
+.external:hover,
+.external:hover::after {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.units-radio {
+    text-align: left;
+    font-size: 1.4em;
+    margin-left: 4%;
 }
 
 #description p {
@@ -433,6 +453,10 @@ nav li a:active::after {
     .recipe-img-description {
         flex-wrap: wrap;
         flex-direction: column;
+    }
+
+    .method {
+        margin-left: 0;
     }
 
     #ingredients{
