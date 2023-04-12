@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../../css/default.css" type="text/css"/>
         <script src="../../js/default.js"></script>
     </head>
-    <body onload="set_recipe_information('Lamb Tikka Masala', '../../');">
+    <body onload="set_recipe_variables('Lamb Tikka Masala', '../../');">
 
         <header>
             <a href="../../index.html" class="header-box logo"><img  src="../../img/logo/logo-icon-circle.png" alt="Logo" /></a>
@@ -27,47 +27,150 @@
             </ul>
         </nav>
 
-
         <div class="position-wrapper">
             <main class="recipe">
                 <h2>Lamb Tikka Masala</h2>
 
                 <ul class="recipe-img-description">
-                    <li><img id="recipe-img" alt="Recipe Image"></li>
+                    <li>
+                        <img id="recipe-img" alt="Recipe Image">
+                    </li>
+
                     <li id="description">
                         <p>A delicious lamb curry, perfect for home comfort (just don’t think about the calories too much!).</p>
                         <p>Best with lamb neck fillets, but works with any meat (chicken/beef/prawns) or any cut of lamb.</p>
                         <p>Serve piping hot and pair with steamed basmati rice and a naan.</p>
 
-                        <h4 id="course"></h4>
-                        <label for="portions">Portions:</label>
-                        <select name="portions" id="portions">
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                            <option value=8>8</option>
+                        <h4 id="course">Course: Dinner</h4>
 
+                        <label for="portions">Portions:</label>
+                        <select name="portions" id="portions" onchange="check_unit_portions_change();">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6" selected>6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
                         </select>
+
+                        <h4>Prep time: 30</h4>
+                        <h4>Cook time: 105</h4>
+                        <h4>Total time: 135</h4>
                     </li>
                 </ul>
 
                 <!-- metric / imperial radio -->
                 <div class="units-radio">
-                    <input type="radio" name="units" value="imperial" id="imperial">
+                    <input type="radio" name="units" value="imperial" id="imperial" onclick="change_to_imperial();" checked>
                     <label for="option-1">Imperial</label>
 
-                    <input type="radio" name="units" value="metric" id="metric">
+                    <input type="radio" name="units" value="metric" id="metric" onclick="change_to_metric();">
                     <label for="metric">Metric</label>
                 </div>
 
                 <h3>Ingredients</h3>
                 <ul id="ingredients">
 
-                </ul>
+                <li>
+                    <a class="external 0">
+                        <span class="quantity 0">2 </span>
+                        <span class="unit 0">cups</span>
+                        <span class="item 0"> Curry Base Sauce - see link</span>
+                    </a>
+                </li>
+                <li>
+                    <span class="quantity 1">1 </span>
+                    <span class="unit 1">Tbsp</span>
+                    <span class="item 1"> Ghee</span>
+                </li>
+                <li>
+                    <span class="quantity 2">2 </span>
+                    <span class="unit 2">Ibs</span>
+                    <span class="item 2"> Lamb - Cubed</span>
+                </li>
+                <li>
+                    <span class="quantity 3">2 </span>
+                    <span class="unit 3">Tbsp</span>
+                    <span class="item 3"> Ground Turmeric</span>
+                </li>
+                <li>
+                    <span class="quantity 4">2 </span>
+                    <span class="unit 4">Tbsp</span>
+                    <span class="item 4"> Vegetable Oil</span>
+                </li>
+                <li>
+                    <span class="quantity 5">3 </span>
+                    <span class="unit 5">cloves</span>
+                    <span class="item 5"> Garlic - Peeled &amp; Crushed</span>
+                </li>
+                <li>
+                    <span class="quantity 6">1 </span>
+                    <span class="unit 6">inch</span>
+                    <span class="item 6"> Ginger - Peeled &amp; diced</span>
+                </li>
+                <li>
+                    <span class="quantity 7">1 </span>
+                    <span class="unit 7">tsp</span>
+                    <span class="item 7"> Dried Onion Powder</span>
+                </li>
+                <li>
+                    <span class="quantity 8">1 </span>
+                    <span class="unit 8">tsp</span>
+                    <span class="item 8"> Ground Cumin</span>
+                </li>
+                <li>
+                    <span class="quantity 9">1 </span>
+                    <span class="unit 9">tsp</span>
+                    <span class="item 9"> Ground Coriander</span>
+                </li>
+                <li>
+                    <span class="quantity 10">1 </span>
+                    <span class="unit 10">tsp</span>
+                    <span class="item 10"> Paprika</span>
+                </li>
+                <li>
+                    <span class="quantity 11">2 </span>
+                    <span class="unit 11">tsp</span>
+                    <span class="item 11"> Curry Powder</span>
+                </li>
+                <li>
+                    <span class="quantity 12">1 </span>
+                    <span class="unit 12">tsp</span>
+                    <span class="item 12"> Dried Fenugreek Leaves</span>
+                </li>
+                <li>
+                    <span class="quantity 13">6 </span>
+                    <span class="unit 13">Tbsp</span>
+                    <span class="item 13"> Tomato Paste</span>
+                </li>
+                <li>
+                    <span class="quantity 14">4 </span>
+                    <span class="unit 14">Tbsp</span>
+                    <span class="item 14"> Ground Almonds</span>
+                </li>
+                <li>
+                    <span class="quantity 15">1 </span>
+                    <span class="unit 15">Tbsp</span>
+                    <span class="item 15"> Brown Sugar</span>
+                </li>
+                <li>
+                    <span class="quantity 16">1 </span>
+                    <span class="unit 16">tsp</span>
+                    <span class="item 16"> Garam Masala</span>
+                </li>
+                <li>
+                    <span class="quantity 17">1 </span>
+                    <span class="unit 17">cup</span>
+                    <span class="item 17"> Single Cream</span>
+                </li>
+                <li>
+                    <span class="quantity 18">6 </span>
+                    <span class="unit 18">Tbsp</span>
+                    <span class="item 18"> Corriander - Finely chopped</span>
+                </li>
+            </ul>
 
                 <h3>Method</h3>
                 <ol class="method">
@@ -81,7 +184,6 @@
                     <li>Add the onion powder, cumin, coriander, paprika, curry powder, fenugreek, tomato paste, ground almonds and brown sugar to the lamb. Stir and let the curry simmer slowly for 10 minutes.</li>
                     <li>Pour in the cream and garam masala. Stir well and let it simmer for another 5 minutes.</li>
                     <li>Garnish with the corriander and serve with rice and naan. Enjoy!</li>
-
                 </ol>
                 
             </main>
@@ -94,6 +196,5 @@
                 <p class="copyright">Copyright 2023 Culinary Code, All Rights Reserved</p>
             </footer>
         </div>
-
     </body>
 </html>
