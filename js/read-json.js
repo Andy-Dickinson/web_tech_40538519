@@ -1,15 +1,9 @@
 /* Used to read in from json file, but was blocked in browser, now loading into local storage from being declared here
 url's and paths here are relative to site root. Cannot use root directory as changes not running via VS-code */
 const json_info = {
-    "recipe-of-the-week":[
-        {
-            "name":"Lamb Tikka Masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html"
-        }
-    ],
+    "recipe-of-the-week":"Lamb Tikka Masala",
     "popular recipes":[
-        {
-            "name":"Lamb Tikka Masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html"
-        }
+        "Lamb Tikka Masala", "Curry Base Sauce"
     ],
     "cuisine":[ 
         {
@@ -31,7 +25,10 @@ const json_info = {
     ],
     "recipes":[
         {
-            "name":"Lamb Tikka Masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "prep-time":30, "cook-time":105, "total-time":135, "ingredients-info":{"scale-info":{"portions":6, "imperial":true, "course":"dinner"}, "recipe_required":[{"url":"html/curry-base-sauce.html", "quantity":2, "unit":"cups", "name":"Curry Base Sauce"}], "ingredients":[{"quantity":1, "unit":"Tbsp", "name":"Ghee"}, {"quantity":2, "unit":"Ibs", "name":"Lamb - Cubed"}, {"quantity":2, "unit":"Tbsp", "name":"Ground Turmeric"}, {"quantity":2, "unit":"Tbsp", "name":"Vegetable Oil"}, {"quantity":3, "unit":"cloves", "name":"Garlic - Peeled & Crushed"}, {"quantity":1, "unit":"inch", "name":"Ginger - Peeled & diced"}, {"quantity":1, "unit":"tsp", "name":"Dried Onion Powder"}, {"quantity":1, "unit":"tsp", "name":"Ground Cumin"}, {"quantity":1, "unit":"tsp", "name":"Ground Coriander"}, {"quantity":1, "unit":"tsp", "name":"Paprika"}, {"quantity":2, "unit":"tsp", "name":"Curry Powder"}, {"quantity":1, "unit":"tsp", "name":"Dried Fenugreek Leaves"}, {"quantity":6, "unit":"Tbsp", "name":"Tomato Paste"}, {"quantity":4, "unit":"Tbsp", "name":"Ground Almonds"}, {"quantity":1, "unit":"Tbsp", "name":"Brown Sugar"}, {"quantity":1, "unit":"tsp", "name":"Garam Masala"}, {"quantity":1, "unit":"cup", "name":"Single Cream"}, {"quantity":6, "unit":"Tbsp", "name":"Corriander - Finely chopped"}]}
+            "name":"Lamb Tikka Masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "required_recipes":[{"name":"Curry Base Sauce"}]
+        },
+        {
+            "name":"Curry Base Sauce", "img-path":"img/recipes/curry-base-sauce.jpg", "url":"html/recipes/curry-base-sauce.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":false, "dessert":false, "vegetarian":false, "vegan":false, "required_recipes":[]
         }
     ]
 }
