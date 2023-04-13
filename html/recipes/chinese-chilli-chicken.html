@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <title>Chinese Chilli Chicken | Culinary Code Recipes</title>
+
+        <link rel="icon" href="../../img/logo/logo-icon-circle.png">
+        <link rel="stylesheet" href="../../css/default.css" type="text/css">
+        <script src="../../js/default.js"></script>
+        <script src="../../js/recipes.js"></script>
+    </head>
+    <body onload="set_recipe_variables('Chinese Chilli Chicken', '../../');">
+
+        <header>
+            <a href="../../index.html" class="header-box logo"><img  src="../../img/logo/logo-icon-circle.png" alt="Logo"></a>
+            <h1 class="header-box site-name">Culinary Code</h1>
+            <div class="header-box"></div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../html/all-recipes.html">ALL RECIPES</a></li>
+                <li><a href="../../html/cuisine.html">CUISINE</a></li>
+                <li><a href="../../html/courses.html">COURSES</a></li>
+                <li><a href="../../html/diet.html">DIET</a></li>
+            </ul>
+        </nav>
+
+        <div class="position-wrapper">
+            <main class="recipe">
+                <h2>Chinese Chilli Chicken</h2>
+
+                <ul class="recipe-img-description">
+                    <li>
+                        <img id="recipe-img" alt="Recipe Image" src="../../img/recipes/chinese-chilli-chicken.jpg">
+                    </li>
+
+                    <li id="description">
+                        <p>A fantastic (and fairly hot) sticky, yummy chicken dish.</p>
+                        <p>Can't handle the heat, go easy on the chillies.</p>
+
+                        <h4 id="course">Course: Dinner</h4>
+
+                        <label for="portions">Portions:</label>
+                        <select name="portions" id="portions" onchange="check_unit_portions_change();">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4" selected>4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+
+                        <h4>Prep time: 50 minutes</h4>
+                        <h4>Cook time: 35 minutes</h4>
+                        <h4>Total time: 85 minutes</h4>
+                    </li>
+                </ul>
+
+                <!-- metric / imperial radio -->
+                <div class="units-radio">
+                    <input type="radio" name="units" value="imperial" id="imperial" onclick="change_to_imperial();" checked>
+                    <label for="imperial">Imperial</label>
+
+                    <input type="radio" name="units" value="metric" id="metric" onclick="change_to_metric();">
+                    <label for="metric">Metric</label>
+                </div>
+
+                <h3>Ingredients</h3>
+                <ul id="ingredients">
+                    <li>
+                        <span class="quantity 0">1.1 </span>
+                        <span class="unit 0">Ibs</span>
+                        <span class="item 0"> Chicken Breasts</span>
+                    </li>
+                    <li>
+                        <span class="quantity 1">0.75 </span>
+                        <span class="unit 1">Cup</span>
+                        <span class="item 1"> Plain Flour</span>
+                    </li>
+                    <li>
+                        <span class="quantity 2">0.5 </span>
+                        <span class="unit 2">tsp</span>
+                        <span class="item 2"> Ground Pepper Powder</span>
+                    </li>
+                    <li>
+                        <span class="quantity 3">2 </span>
+                        <span class="unit 3">Large</span>
+                        <span class="item 3"> egg(s)</span>
+                    </li>
+                    <li>
+                        <span class="quantity 4">1 </span>
+                        <span class="unit 4">Cup</span>
+                        <span class="item 4"> Sunflower or Rapeseed Oil</span>
+                    </li>
+                    <li>
+                        <span class="quantity 5">1 </span>
+                        <span class="unit 5">Cup</span>
+                        <span class="item 5"> Chicken Stock</span>
+                    </li>
+                    <li>
+                        <span class="quantity 6">1 </span>
+                        <span class="unit 6">Tbsp</span>
+                        <span class="item 6"> Lemon Juice</span>
+                    </li>
+                    <li>
+                        <span class="quantity 7">2 </span>
+                        <span class="unit 7">Tbsp</span>
+                        <span class="item 7"> Soya Sauce</span>
+                    </li>
+                    <li>
+                        <span class="quantity 8">0.5 </span>
+                        <span class="unit 8">Tbsp</span>
+                        <span class="item 8"> Honey - Or Sugar</span>
+                    </li>
+                    <li>
+                        <span class="quantity 9">1 </span>
+                        <span class="unit 9">Tbsp</span>
+                        <span class="item 9"> Sweet Chill Sauce</span>
+                    </li>
+                    <li>
+                        <span class="quantity 10">2 </span>
+                        <span class="unit 10">Tbsp</span>
+                        <span class="item 10"> Cornflour</span>
+                    </li>
+                    <li>
+                        <span class="quantity 11">1 </span>
+                        <span class="unit 11">Tbsp</span>
+                        <span class="item 11"> Butter</span>
+                    </li>
+                    <li>
+                        <span class="quantity 12">1 </span>
+                        <span class="unit 12">tsp</span>
+                        <span class="item 12"> Ginger</span>
+                    </li>
+                    <li>
+                        <span class="quantity 13">2 </span>
+                        <span class="unit 13">Cloves</span>
+                        <span class="item 13"> Garlic - Crushed</span>
+                    </li>
+                    <li>
+                        <span class="quantity 14">1 </span>
+                        <span class="unit 14"></span>
+                        <span class="item 14"> Red Pepper - Cut into Strips</span>
+                    </li>
+                    <li>
+                        <span class="quantity 15">3 </span>
+                        <span class="unit 15"></span>
+                        <span class="item 15"> Red Chillis - Chopped</span>
+                    </li>
+                    <li>
+                        <span class="quantity 16">2 </span>
+                        <span class="unit 16"></span>
+                        <span class="item 16"> Spring Onion(s) - Chopped</span>
+                    </li>
+                    <li>
+                        <span>Rice to Serve</span>
+                    </li>
+                </ul>
+
+                <h3>Method</h3>
+                <ol class="method">
+                    <li>Pat chicken breasts dry with paper towels and cut into strips.</li>
+                    <li>Mix the plain flour with the ground black pepper and some salt to taste.</li>
+                    <li>Coat the chicken with approximately 1/4 of the flour mix, place the rest on a plate to one side. Keep the chicken in the fridge for 20-30 minutes (This helps improve the batter).</li>
+                    <li>Mix the eggs together and place in a suitable container for dipping the chicken.</li>
+                    <li>Heat the oil on medium/high in a pan or wok.</li>
+                    <li>Working in small batches, dip the previously floured chicken pieces into the egg and then coat in the flour on the plate.</li>
+                    <li>Once golden brown, place on paper towels to drain excess oil.</li>
+                    <li>Once all fried, keep warm in the oven.</li>
+                    <li>Mix together chicken stock, lemon juice, soya, honey, sweet chilli sauce, and cornflour until smooth.Keep to one side.</li>
+                    <li>Heat the butter in a pot. When it begins to bubble, add the ginger, garlic, pepper, and chillies and fry until cooked through (about 4 minutes).</li>
+                    <li>Add the stock mix and stir until the sauce thickens.</li>
+                    <li>Once thickened, add the chopped spring onions and stir for a further minute.</li>
+                    <li>Add the chicken pieces to the sauce and ensure that all pieces are well coated and piping hot.</li>
+                    <li>Serve with white rice. Enjoy!</li>
+                </ol>
+                
+            </main>
+            
+
+            <footer class="footer">
+                <a href="#">Site map</a>
+                <a href="#">About us</a>
+                <a href="#">Contact us</a>
+                <p class="copyright">Copyright 2023 Culinary Code, All Rights Reserved</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -2,12 +2,19 @@
 url's and paths here are relative to site root. Cannot use root directory as changes not running via VS-code */
 const json_info = {
     "recipe-of-the-week":"Lamb Tikka Masala",
+
     "popular recipes":[
-        "Lamb Tikka Masala", "Curry Base Sauce"
+        "Vegetarian Margherita", "Chinese Chilli Chicken", "Lamb Tikka Masala"
     ],
     "cuisine":[ 
         {
             "name":"Indian", "img-path":"img/cuisines/indian.jpg", "url":"html/cuisines/indian-cuisine.html"
+        },
+        {
+            "name":"Italian", "img-path":"img/cuisines/italian.jpg", "url":"html/cuisines/italian-cuisine.html"
+        },
+        {
+            "name":"Chinese", "img-path":"img/cuisines/chinese.jpg", "url":"html/cuisines/chinese-cuisine.html"
         }
     ],
     "courses":[
@@ -28,7 +35,16 @@ const json_info = {
             "name":"Lamb Tikka Masala", "img-path":"img/recipes/lamb-tikka-masala.jpg", "url":"html/recipes/lamb-tikka-masala.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "required_recipes":[{"name":"Curry Base Sauce"}]
         },
         {
-            "name":"Curry Base Sauce", "img-path":"img/recipes/curry-base-sauce.jpg", "url":"html/recipes/curry-base-sauce.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":false, "dessert":false, "vegetarian":false, "vegan":false, "required_recipes":[]
+            "name":"Vegetarian Margherita", "img-path":"img/recipes/vegetarian-margherita.jpg", "url":"html/recipes/vegetarian-margherita.html", "cuisine":"Italian", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":true, "vegan":false, "required_recipes":[{"name":"Pizza Dough"}]
+        },
+        {
+            "name":"Pizza Dough", "img-path":"img/recipes/pizza-dough.jpg", "url":"html/recipes/pizza-dough.html", "cuisine":"Italian", "breakfast":false, "lunch":false, "dinner":false, "dessert":false, "vegetarian":true, "vegan":true, "required_recipes":[]
+        },
+        {
+            "name":"Chinese Chilli Chicken", "img-path":"img/recipes/chinese-chilli-chicken.jpg", "url":"html/recipes/chinese-chilli-chicken.html", "cuisine":"Chinese", "breakfast":false, "lunch":false, "dinner":true, "dessert":false, "vegetarian":false, "vegan":false, "required_recipes":[]
+        },
+        {
+            "name":"Curry Base Sauce", "img-path":"img/recipes/curry-base-sauce.jpg", "url":"html/recipes/curry-base-sauce.html", "cuisine":"Indian", "breakfast":false, "lunch":false, "dinner":false, "dessert":false, "vegetarian":true, "vegan":true, "required_recipes":[]
         }
     ]
 }

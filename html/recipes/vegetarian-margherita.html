@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <title>Vegetarian Margherita | Culinary Code Recipes</title>
+
+        <link rel="icon" href="../../img/logo/logo-icon-circle.png">
+        <link rel="stylesheet" href="../../css/default.css" type="text/css">
+        <script src="../../js/default.js"></script>
+        <script src="../../js/recipes.js"></script>
+    </head>
+    <body onload="set_recipe_variables('Vegetarian Margherita', '../../');">
+
+        <header>
+            <a href="../../index.html" class="header-box logo"><img  src="../../img/logo/logo-icon-circle.png" alt="Logo"></a>
+            <h1 class="header-box site-name">Culinary Code</h1>
+            <div class="header-box"></div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../html/all-recipes.html">ALL RECIPES</a></li>
+                <li><a href="../../html/cuisine.html">CUISINE</a></li>
+                <li><a href="../../html/courses.html">COURSES</a></li>
+                <li><a href="../../html/diet.html">DIET</a></li>
+            </ul>
+        </nav>
+
+        <div class="position-wrapper">
+            <main class="recipe">
+                <h2>Vegetarian Margherita</h2>
+
+                <ul class="recipe-img-description">
+                    <li>
+                        <img id="recipe-img" alt="Recipe Image" src="../../img/recipes/vegetarian-margherita.jpg">
+                    </li>
+
+                    <li id="description">
+                        <p>An easy, quick and tasty meal. Fun to make together with kids or friends.</p>
+                        <p>If the dough is too wet, add a little more flour. Too stretchy, roll out and leave to rest for 10 minutes or so.</p>
+
+                        <h4 id="course">Course: Dinner</h4>
+
+                        <label for="portions">Portions:</label>
+                        <select name="portions" id="portions" onchange="check_unit_portions_change();">
+                            <option value="1">1 Person - 1 Small Pizza</option>
+                            <option value="2">2 People - 1 Medium Pizza</option>
+                            <option value="3">3 People - 1 Large Pizza</option>
+                            <option value="4" selected>4 People - 2 Medium Pizzas</option>
+                            <option value="5">5 People - 2 Large Pizzas</option>
+                            <option value="6">6 People - 3 Medium Pizzas</option>
+                            <option value="7">7 People - 3 Large Pizzas</option>
+                            <option value="8">8 People - 4 Medium Pizzas</option>
+                        </select>
+
+                        <a href="../../html/recipes/pizza-dough.html" class="external 0"><h4>Plus Pizza Base: +60 minutes</h4></a>
+                        <h4>Prep time: 10 minutes</h4>
+                        <h4>Cook time: 10 minutes</h4>
+                        <h4>Total time: 20 minutes</h4>
+                    </li>
+                </ul>
+
+                <!-- metric / imperial radio -->
+                <div class="units-radio">
+                    <input type="radio" name="units" value="imperial" id="imperial" onclick="change_to_imperial();">
+                    <label for="imperial">Imperial</label>
+
+                    <input type="radio" name="units" value="metric" id="metric" onclick="change_to_metric();" checked>
+                    <label for="metric">Metric</label>
+                </div>
+
+                <h3>Ingredients</h3>
+                <ul id="ingredients">
+                    <li>
+                        <a href="../../html/recipes/pizza-dough.html" class="external 0">
+                            <span class="quantity 0">300 </span>
+                            <span class="unit 0">g</span>
+                            <span class="item 0"> Pizza Base Dough - see link</span>
+                        </a>
+                    </li>
+                    <li>
+                        <span class="quantity 1">100 </span>
+                        <span class="unit 1">ml</span>
+                        <span class="item 1"> Passata</span>
+                    </li>
+                    <li>
+                        <span class="quantity 2">1 </span>
+                        <span class="unit 2">Handful</span>
+                        <span class="item 2"> Fresh Basil - For Sauce</span>
+                    </li>
+                    <li>
+                        <span class="quantity 3">1 </span>
+                        <span class="unit 3">Clove</span>
+                        <span class="item 3"> Garlic - Crushed</span>
+                    </li>
+                    <li>
+                        <span class="quantity 4">125 </span>
+                        <span class="unit 4">g</span>
+                        <span class="item 4"> Mozzarella Ball - Sliced</span>
+                    </li>
+                    <li>
+                        <span class="quantity 5">1 </span>
+                        <span class="unit 5">Handful</span>
+                        <span class="item 5"> Parmesan - Grated</span>
+                    </li>
+                    <li>
+                        <span class="quantity 6">1 </span>
+                        <span class="unit 6">Handful</span>
+                        <span class="item 6"> Cherry Tomatoes - Halved</span>
+                    </li>
+                    <li>
+                        <span class="quantity 7">1 </span>
+                        <span class="unit 7">Handful</span>
+                        <span class="item 7"> Basil Leaves - Garnish</span>
+                    </li>
+                </ul>
+
+                <h3>Method</h3>
+                <ol class="method">
+                    <li>Preheat the oven to <span class="temp 0">220</span><span class="temp-unit 0">C</span>.</li>
+                    <li>Make the sauce: Mix the passata, basil (make sure to have some for the garnish) and crushed garlic together, then season to taste.</li>
+                    <li>Roll out the dough, give it a quick knead if necessary and split into a balls (one for each pizza).</li>
+                    <li>Place dough onto floured baking sheets.</li>
+                    <li>Spread sauce onto pizza base with the back of a spoon (modest is better).</li>
+                    <li>Sprinikle over the cheese and tomatoes and a drizzle ofo olive oil. Season to taste.</li>
+                    <li>Place in top shelf of oven for 8-10 minutes.</li>
+                    <li>Rip basil leaves and sprinkle over along with a little more olive oil.</li>
+                    <li>Serve and enjoy!</li>
+                </ol>
+                
+            </main>
+            
+
+            <footer class="footer">
+                <a href="#">Site map</a>
+                <a href="#">About us</a>
+                <a href="#">Contact us</a>
+                <p class="copyright">Copyright 2023 Culinary Code, All Rights Reserved</p>
+            </footer>
+        </div>
+    </body>
+</html>

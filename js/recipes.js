@@ -73,6 +73,8 @@ function check_unit_portions_change() {
         reset_ingredient_units();
         change_to_imperial();
     }
+
+    check_plurals();
 }
 
 
@@ -135,6 +137,23 @@ function change_to_imperial() {
             change_quantity(i, conversion_list[1]);
         }
     }
+
+    check_plurals();
+    temperatures_to_f();
+}
+
+
+/* Converts temperatures to fahrenheit */
+function temperatures_to_f() {
+    var temps = document.getElementsByClassName("temp");
+    var temp_units = document.getElementsByClassName("temp-unit");
+
+    for(var i=0; i<temps.length; i++){
+        if(temp_units[i].innerHTML == "C") {
+            temps[i].innerHTML = (+(temps[i].innerHTML) * 1.8) + 32;
+            temp_units[i].innerHTML = "F";
+        }
+    }
 }
 
 
@@ -156,7 +175,105 @@ function change_to_metric() {
             change_quantity(i, conversion_list[1]);
         }
     }
+
+    check_plurals();
+    temperatures_to_c();
 }
+
+
+/* Converts temperatures to celsius */
+function temperatures_to_c() {
+    var temps = document.getElementsByClassName("temp");
+    var temp_units = document.getElementsByClassName("temp-unit");
+
+    for(var i=0; i<temps.length; i++){
+        if(temp_units[i].innerHTML == "F") {
+            temps[i].innerHTML = (+(temps[i].innerHTML) - 32) * (5/9);
+            temp_units[i].innerHTML = "C";
+        }
+    }
+}
+
+
+/* Checks and modifies any units which should be singular or plural */
+function check_plurals() {
+    var quantities = document.getElementsByClassName("quantity");
+    var units = document.getElementsByClassName("unit");
+
+    for(var i=0; i<quantities.length; i++){
+        if(+(quantities[i].innerHTML)>1){
+            make_plural(units[i]);
+        } else {
+            make_singular(units[i]);
+        }
+    }
+}
+
+
+/* Changes unit to plural if not already */
+function make_plural(unit) {
+    switch(unit.innerHTML){
+        case "Cup":
+            unit.innerHTML = "Cups";
+            break;
+        
+        case "Clove":
+            unit.innerHTML = "Cloves";
+            break;
+        
+        case "Inch":
+            unit.innerHTML = "Inches";
+            break;
+
+        case "Ib":
+            unit.innerHTML = "Ibs";
+            break;
+            
+        case "Handful":
+            unit.innerHTML = "Handfuls";
+            break;
+
+        case "Pint":
+            unit.innerHTML = "Pints";
+            break;
+
+        default:
+            console.log("Unit either not recognised or not requireing made plural - ", unit.innerHTML);
+    }
+} 
+
+
+/* Changes unit to singular if not already */
+function make_singular(unit) {
+    switch(unit.innerHTML){
+        case "Cups":
+            unit.innerHTML = "Cup";
+            break;
+        
+        case "Cloves":
+            unit.innerHTML = "Clove";
+            break;
+        
+        case "Inches":
+            unit.innerHTML = "Inch";
+            break;
+
+        case "Ibs":
+            unit.innerHTML = "Ib";
+            break;
+            
+        case "Handfuls":
+            unit.innerHTML = "Handful";
+            break;
+
+        case "Pints":
+            unit.innerHTML = "Pint";
+            break;
+
+        default:
+            console.log("Unit either not recognised or not requireing made singular - ", unit.innerHTML);
+    }
+} 
 
 
 /* imperial conversion lookup
@@ -173,19 +290,19 @@ function get_conversion_to_imperial(quantity, curr_unit) {
                 convert_list.push("Tbsp");
                 convert_list.push(quantity/17.758);
             }else if(quantity<270){
-                convert_list.push("cup");
+                convert_list.push("Cup");
                 convert_list.push(quantity/236.6);
             }else if(quantity<800){
-                convert_list.push("cups");
+                convert_list.push("Cups");
                 convert_list.push(quantity/236.6);
             }else {
-                convert_list.push("pints");
+                convert_list.push("Pints");
                 convert_list.push(quantity/568.3);
             }
             break;
             
         case "ltr":
-            convert_list.push("pints");
+            convert_list.push("Pints");
             convert_list.push(quantity*1.76);
             break;
         
@@ -210,17 +327,53 @@ function get_conversion_to_imperial(quantity, curr_unit) {
             break;
             
         case "cm":
-            convert_list.push("inch");
+            convert_list.push("Inch");
             convert_list.push(quantity/2.54);
             break;
 
-        case "cloves":
-            convert_list.push("cloves");
+        case "Clove":
+            convert_list.push("Clove");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Cloves":
+            convert_list.push("Cloves");
+            convert_list.push(+(quantity));
+            break;
+        
+        case "Bulb":
+            convert_list.push("Bulb");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Large":
+            convert_list.push("Large");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Medium":
+            convert_list.push("Medium");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Can":
+            convert_list.push("Can");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Handful":
+            convert_list.push("Handful");
+            convert_list.push(+(quantity));
+            break;
+            
+        case "":
+            convert_list.push("");
             convert_list.push(+(quantity));
             break;
 
         default:
             console.log("unit not recognised when converting to imperial: ", curr_unit);
+            break;
     }
 
     return convert_list;
@@ -253,7 +406,7 @@ function get_conversion_to_metric(quantity, curr_unit) {
             }
             break;
 
-        case "pint":
+        case "Pint":
             if(quantity>1){
                 convert_list.push("ltr");
                 convert_list.push(quantity/1.76);
@@ -261,8 +414,9 @@ function get_conversion_to_metric(quantity, curr_unit) {
                 convert_list.push("ml");
                 convert_list.push(quantity*568.3);
             }
+            break;
 
-        case "cups":
+        case "Cups":
             if(quantity>4) {
                 convert_list.push("ltr");
                 convert_list.push(quantity/4.227);
@@ -272,7 +426,7 @@ function get_conversion_to_metric(quantity, curr_unit) {
             }
             break;
 
-        case "cup":
+        case "Cup":
             convert_list.push("ml");
             convert_list.push(quantity*236.6);
             break;
@@ -297,18 +451,54 @@ function get_conversion_to_metric(quantity, curr_unit) {
             }
             break;
 
-        case "cloves":
-            convert_list.push("cloves");
+        case "Clove":
+            convert_list.push("Clove");
             convert_list.push(+(quantity));
             break;
-            
-        case "inch":
+
+        case "Cloves":
+            convert_list.push("Cloves");
+            convert_list.push(+(quantity));
+            break;
+        
+        case "Bulb":
+            convert_list.push("Bulb");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Large":
+            convert_list.push("Large");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Medium":
+            convert_list.push("Medium");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Can":
+            convert_list.push("Can");
+            convert_list.push(+(quantity));
+            break;
+        
+        case "Handful":
+            convert_list.push("Handful");
+            convert_list.push(+(quantity));
+            break;
+
+        case "Inch":
             convert_list.push("cm");
             convert_list.push(quantity*2.54);
+            break;
+
+        case "":
+            convert_list.push("");
+            convert_list.push(+(quantity));
             break;
         
         default:
             console.log("unit not recognised when converting to metric: ", curr_unit);
+            break;
     }
 
     return convert_list;

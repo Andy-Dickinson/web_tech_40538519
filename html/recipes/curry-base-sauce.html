@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+        <title>Curry Base Sauce | Culinary Code Recipes</title>
+
+        <link rel="icon" href="../../img/logo/logo-icon-circle.png">
+        <link rel="stylesheet" href="../../css/default.css" type="text/css">
+        <script src="../../js/default.js"></script>
+        <script src="../../js/recipes.js"></script>
+    </head>
+    <body onload="set_recipe_variables('Curry Base Sauce', '../../');">
+
+        <header>
+            <a href="../../index.html" class="header-box logo"><img  src="../../img/logo/logo-icon-circle.png" alt="Logo"></a>
+            <h1 class="header-box site-name">Culinary Code</h1>
+            <div class="header-box"></div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../../html/all-recipes.html">ALL RECIPES</a></li>
+                <li><a href="../../html/cuisine.html">CUISINE</a></li>
+                <li><a href="../../html/courses.html">COURSES</a></li>
+                <li><a href="../../html/diet.html">DIET</a></li>
+            </ul>
+        </nav>
+
+        <div class="position-wrapper">
+            <main class="recipe">
+                <h2>Curry Base Sauce</h2>
+
+                <ul class="recipe-img-description">
+                    <li>
+                        <img id="recipe-img" alt="Recipe Image" src="../../img/recipes/curry-base-sauce.jpg">
+                    </li>
+
+                    <li id="description">
+                        <p>Make authentic curries in a hurry after getting ahead by pre-preparing this great curry base.</p>
+                        <p>Freezes well and can be made in advance or in large batches.</p>
+
+                        <h4 id="course">Course: n/a</h4>
+
+                        <label for="portions">Portions (number of curries serving 4 each):</label>
+                        <select name="portions" id="portions" onchange="check_unit_portions_change();">
+                            <option value="1">1 - 500 ml (2 cups)</option>
+                            <option value="2">2 - 1 ltr (4 cups)</option>
+                            <option value="3" selected>3 - 1.5 ltr (6 cups)</option>
+                            <option value="4">4 - 2 ltr (8 cups)</option>
+                            <option value="5">5 - 2.5 ltr (10 cups)</option>
+                            <option value="6">6 - 3 ltr (12 cups)</option>
+                            <option value="7">7 - 3.5 ltr (14 cups)</option>
+                            <option value="8">8 - 4 ltr (16 cups)</option>
+                        </select>
+
+                        <h4>Prep time: 25 minutes</h4>
+                        <h4>Cook time: 35 minutes</h4>
+                        <h4>Total time: 60 minutes</h4>
+                    </li>
+                </ul>
+
+                <!-- metric / imperial radio -->
+                <div class="units-radio">
+                    <input type="radio" name="units" value="imperial" id="imperial" onclick="change_to_imperial();">
+                    <label for="imperial">Imperial</label>
+
+                    <input type="radio" name="units" value="metric" id="metric" onclick="change_to_metric();" checked>
+                    <label for="metric">Metric</label>
+                </div>
+
+                <h3>Ingredients</h3>
+                <ul id="ingredients">
+                    <li>
+                        <span class="quantity 0">60 </span>
+                        <span class="unit 0">ml</span>
+                        <span class="item 0"> Ghee</span>
+                    </li>
+                    <li>
+                        <span class="quantity 1">5 </span>
+                        <span class="unit 1">Large</span>
+                        <span class="item 1"> Onion(s) - Peeled &amp; Chopped</span>
+                    </li>
+                    <li>
+                        <span class="quantity 2">1 </span>
+                        <span class="unit 2">Bulb</span>
+                        <span class="item 2"> Garlic - Peeled</span>
+                    </li>
+                    <li>
+                        <span class="quantity 3">10 </span>
+                        <span class="unit 3">cm</span>
+                        <span class="item 3"> Ginger - Peeled &amp; Chopped</span>
+                    </li>
+                    <li>
+                        <span class="quantity 4">2 </span>
+                        <span class="unit 4"></span>
+                        <span class="item 4"> Carrot(s)</span>
+                    </li>
+                    <li>
+                        <span class="quantity 5">1 </span>
+                        <span class="unit 5"></span>
+                        <span class="item 5"> Green Pepper - Washed &amp; Chopped</span>
+                    </li>
+                    <li>
+                        <span class="quantity 6">1 </span>
+                        <span class="unit 6"></span>
+                        <span class="item 6"> Red Pepper - Washed &amp; Chopped</span>
+                    </li>
+                    <li>
+                        <span class="quantity 7">1 </span>
+                        <span class="unit 7">Can</span>
+                        <span class="item 7"> Chopped tomatoes</span>
+                    </li>
+                    <li>
+                        <span class="quantity 8">500 </span>
+                        <span class="unit 8">ml</span>
+                        <span class="item 8"> Water</span>
+                    </li>
+                    <li>
+                        <span class="quantity 9">15 </span>
+                        <span class="unit 9">ml</span>
+                        <span class="item 9"> Curry Powder</span>
+                    </li>
+                    <li>
+                        <span class="quantity 10">15 </span>
+                        <span class="unit 10">ml</span>
+                        <span class="item 10"> Ground Cumin</span>
+                    </li>
+                    <li>
+                        <span class="quantity 11">15 </span>
+                        <span class="unit 11">ml</span>
+                        <span class="item 11"> Ground Coriander</span>
+                    </li>
+                    <li>
+                        <span class="quantity 12">15 </span>
+                        <span class="unit 12">ml</span>
+                        <span class="item 12"> Ground Turmeric</span>
+                    </li>
+                    <li>
+                        <span class="quantity 13">15 </span>
+                        <span class="unit 13">ml</span>
+                        <span class="item 13"> Ground Feunugreek</span>
+                    </li>
+                    <li>
+                        <span class="quantity 14">15 </span>
+                        <span class="unit 14">ml</span>
+                        <span class="item 14"> Smoked Paprika</span>
+                    </li>
+                </ul>
+
+                <h3>Method</h3>
+                <ol class="method">
+                    <li>Heat the oil in a large pot.</li>
+                    <li>Gently fry the onions for 5 minutes until softened.</li>
+                    <li>Add the garlic, ginger and carrots. Stir. Fry for another 5 minutes.</li>
+                    <li>Place the rest of the ingredients in the pot, ensuring the water covers most of the veg, add more if required.</li>
+                    <li>Simmer for 15-20 minutes until the veg is cooked and tender.</li>
+                    <li>Place the contents in a food processor and blend until smooth.</li>
+                    <li>Use immediately in a curry, store in the fridge for up to 4 days or portion and freeze. Enjoy!</li>
+                </ol>
+                
+            </main>
+            
+
+            <footer class="footer">
+                <a href="#">Site map</a>
+                <a href="#">About us</a>
+                <a href="#">Contact us</a>
+                <p class="copyright">Copyright 2023 Culinary Code, All Rights Reserved</p>
+            </footer>
+        </div>
+    </body>
+</html>
