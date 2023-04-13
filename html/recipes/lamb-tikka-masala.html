@@ -2,18 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
 
         <title>Lamb Tikka Massala | Culinary Code Recipes</title>
 
         <link rel="icon" href="../../img/logo/logo-icon-circle.png">
-        <link rel="stylesheet" href="../../css/default.css" type="text/css"/>
+        <link rel="stylesheet" href="../../css/default.css" type="text/css">
         <script src="../../js/default.js"></script>
+        <script src="../../js/recipes.js"></script>
     </head>
     <body onload="set_recipe_variables('Lamb Tikka Masala', '../../');">
 
         <header>
-            <a href="../../index.html" class="header-box logo"><img  src="../../img/logo/logo-icon-circle.png" alt="Logo" /></a>
+            <a href="../../index.html" class="header-box logo"><img  src="../../img/logo/logo-icon-circle.png" alt="Logo"></a>
             <h1 class="header-box site-name">Culinary Code</h1>
             <div class="header-box"></div>
         </header>
@@ -33,7 +34,7 @@
 
                 <ul class="recipe-img-description">
                     <li>
-                        <img id="recipe-img" alt="Recipe Image">
+                        <img id="recipe-img" alt="Recipe Image" src="../../img/recipes/lamb-tikka-masala.jpg">
                     </li>
 
                     <li id="description">
@@ -64,7 +65,7 @@
                 <!-- metric / imperial radio -->
                 <div class="units-radio">
                     <input type="radio" name="units" value="imperial" id="imperial" onclick="change_to_imperial();" checked>
-                    <label for="option-1">Imperial</label>
+                    <label for="imperial">Imperial</label>
 
                     <input type="radio" name="units" value="metric" id="metric" onclick="change_to_metric();">
                     <label for="metric">Metric</label>
