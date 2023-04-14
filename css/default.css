@@ -307,9 +307,26 @@ nav li a:active::after {
     font-size: 1.5em;
 }
 
+.site-map-section {
+    margin: 3%;
+    margin-top: 1.4%;
+}
+
+.site-map-section h3 {
+    font-size: 1.4em;
+    text-align: left;
+    padding: 1%;
+    margin: 0;
+    background-color: white;
+}
+
 @media all and (max-width: 600px) {
     #list-section h2, #list-section p {
         font-size: 5em;
+    }
+
+    .site-map-section {
+        margin-top: 3%;
     }
 }
 
@@ -347,6 +364,29 @@ nav li a:active::after {
     margin: 1%;
 }
 
+
+.container.site-map {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    background-color: white;
+    margin-bottom: 2%;
+}
+
+.box.site-map {
+    white-space: nowrap;
+    text-align: left;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #023349;
+}
+
+.box.site-map:hover,
+.box.site-map:hover::after {
+    font-weight: bold;
+    color: #da0041;
+    text-decoration: underline;
+}
+
 .box a img:hover,
 .box a img:hover::after {
     opacity: 0.7;
@@ -354,6 +394,22 @@ nav li a:active::after {
 }
 
 @media all and (max-width: 600px) {
+    .container.site-map {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box.site-map {
+        text-align: center;
+        font-size: 4em;
+    }
+
+    .site-map-section h3 {
+        font-size: 4.5em;
+        text-align: center;
+        padding: 2%;
+    }
+
     .box h3 {
         font-size: 6em;
     }
