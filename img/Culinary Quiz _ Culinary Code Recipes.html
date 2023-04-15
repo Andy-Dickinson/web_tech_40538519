@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="../css/quiz.css" type="text/css">
         <script src="../js/quiz.js"></script>
     </head>
-    <body onload="add_another_question();">
+    <body>
 
         <header>
             <a href="../index.html" class="header-box logo"><img  src="../img/logo/logo-icon-circle.png" alt="Logo"></a>
@@ -33,11 +33,17 @@
                 <h2>Culinary Quiz</h2>
 
                 <ul class="quiz-container">
-                    <p>Other answers can be selected if you want to know the right answer.<br>
-                        Though only your first answer will count.</p>
-                    <!-- New questions are added here on load -->
+                    <h4>1. What is the process of submerging veg or fruits quickly in boiling water called?</h4>
+                    <div class="answer-container">
+                        <button class="answer 0 0" onclick="wrong(0, 0);">Soaking</button>
+                        <button class="answer 0 1" onclick="right(0, 1);">Blanching</button>
+                        <button class="answer 0 2" onclick="wrong(0, 2);">Shocking</button>
+                        <button class="answer 0 3" onclick="wrong(0, 3);">Flecking</button>
+                    </div>
+                    
                 </ul>
                 
+            </p>
             
             </main>
             
