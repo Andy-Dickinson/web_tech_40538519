@@ -15,7 +15,7 @@ var questions = {"bank":[
         "answers":["Flour & Butter", "Flour & Eggs", "Flour & Water", "Eggs and Butter", 0]
     },
     {
-        "question":"Which of the following kinds of pasta has its name meaning 'little worms' in Italian?", 
+        "question":"Which of the following kind of pasta has its name meaning 'little worms' in Italian?", 
         "answers":["Spaghetti", "Fidelini", "Vermicelli", "Orzo", 2]
     },
     {
@@ -27,15 +27,15 @@ var questions = {"bank":[
         "answers":["Red", "Green", "Purple", "Blue", 2]
     },
     {
-        "question":"Which of the following additives consists of skin and bones of animals?", 
+        "question":"Which of the following additives consists of the skin and bones of animals?", 
         "answers":["Custard Powder", "Carrageenan", "Guar Gum", "Gelatin", 3]
     },
     {
-        "question":"What is the caramelised juices remaining in the pan after meat is browned called?", 
+        "question":"What are the caramelised juices remaining in the pan after meat is browned called?", 
         "answers":["Vignettes", "Fusilli", "Fond", "Deglace", 2]
     },
     {
-        "question":"What shape do we have when 'julienning' vegetables or fruits?", 
+        "question":"What shape do we have when 'Julienning' vegetables or fruits?", 
         "answers":["Pentagons", "Round shapes", "Cubes", "Matchsticks", 3]
     },
     {
@@ -43,11 +43,11 @@ var questions = {"bank":[
         "answers":["Scallops", "Red Mullet", "Plaice", "Scampi", 3]
     },
     {
-        "question":"Who is the good of food and drink in the ancient Greek myths?", 
+        "question":"Who is the God of food and drink in the ancient Greek myths?", 
         "answers":["Ambrosia", "Dionysus", "Hera", "Hercules", 0]
     },
     {
-        "question":"What does it mean when we macerate slightly underripe fruits?", 
+        "question":"What does it mean when we 'Macerate' slightly underripe fruits?", 
         "answers":["Heat slightly and soak", "Soak in a mixture of alcohol and sugar", "Soak in a mixture of water and vinegar or lemon juice", "To pull that 'sour' face", 1]
     },
     {
@@ -63,7 +63,7 @@ var questions = {"bank":[
         "answers":["Crunchy and Crispy", "Moist and Soft", "Tender and Firm", "Charred", 2]
     },
     {
-        "question":"'Au jus' is a culinary term originated from Franch. It loosely means 'cooked in' what?", 
+        "question":"'Au jus' is a culinary term originated from France. It loosely means 'cooked in' what?", 
         "answers":["Wine", "Honey", "Natural Juices", "Flour and Water", 2]
     },
     {
@@ -71,15 +71,15 @@ var questions = {"bank":[
         "answers":["Squeeze Juice", "Cut the Membranes", "Scrape off the Rind", "Chop into Segments", 2]
     },
     {
-        "question":"What is the process of mixing droplets of vinegar and oil to make them not separate?", 
-        "answers":["Extracting", "Emulsifying", "Clarifying", "Lamb", 1]
+        "question":"What is the process called of mixing droplets of vinegar and oil to make them not separate?", 
+        "answers":["Extracting", "Emulsifying", "Clarifying", "Mingle", 1]
     },
     {
-        "question":"What is a mandoline used for?", 
+        "question":"What is a 'Mandoline' used for?", 
         "answers":["Slice Ingredients Thinly", "Puree Ingredients", "Slow-Cook Ingredients", "Crush Ingredients", 0]
     },
     {
-        "question":"'Beurre Blanc' is a sauce made from which main ingredients?", 
+        "question":"'Beurre Blanc' is a sauce made from what main ingredients?", 
         "answers":["Butter and Flour", "White Wine, Shallots, and Butter", "Vinegar, Sugar, and Flour", "Cream and Butter", 1]
     },
     {

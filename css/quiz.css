@@ -88,6 +88,10 @@ button {
     background-color: rgb(115, 195, 215);
 }
 
+.highlight {
+    color: #da0041;
+}
+
 @media all and (max-width: 600px) {
 
     main {
