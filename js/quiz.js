@@ -12,7 +12,7 @@ var questions = {"bank":[
     },
     {
         "question":"A 'roux' is often added while cooking to help thicken sauces or soups. What are the main ingredients of this sauce?", 
-        "answers":["Flour & Butter", "Flour & Eggs", "Flour & Water", "Eggs and Butter", 0]
+        "answers":["Flour & Butter", "Flour & Eggs", "Flour & Water", "Eggs & Butter", 0]
     },
     {
         "question":"Which of the following kind of pasta has its name meaning 'little worms' in Italian?", 
@@ -205,7 +205,7 @@ function add_another_question() {
 
     if(question_index < question_bank.length){
         new_question = document.createElement("h4");
-        var question = (question_index+1) + "/" + question_bank.length + ") " + question_bank[question_index]["question"];
+        var question = (question_index+1) + " (of " + question_bank.length + ") " + question_bank[question_index]["question"];
 
         new_question.innerHTML = question;
         quiz_container.appendChild(new_question);
