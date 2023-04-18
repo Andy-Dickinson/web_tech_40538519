@@ -175,9 +175,9 @@ function build_go_to_next() {
         var percentage = ((number_correct/questions["bank"].length)*100).toFixed(0);
         var message;
 
-        if(percentage>70){
+        if(percentage>=70){
             message = "Very well done! you got " + percentage + "%";
-        } else if(percentage>40) {
+        } else if(percentage>=40) {
             message = "Congratulations, you got " + percentage + "%";
         } else {
             message = "Better luck next time, you got " + percentage + "%";
@@ -205,7 +205,7 @@ function add_another_question() {
 
     if(question_index < question_bank.length){
         new_question = document.createElement("h4");
-        var question = (question_index+1) + ". " + question_bank[question_index]["question"];
+        var question = (question_index+1) + "/" + question_bank.length + ") " + question_bank[question_index]["question"];
 
         new_question.innerHTML = question;
         quiz_container.appendChild(new_question);
