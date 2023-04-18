@@ -316,6 +316,11 @@ nav li a:active::after {
     padding-top: 0;
 }
 
+.about-contact a {
+    text-decoration: none;
+    color: #023349;
+}
+
 .about-contact div {
     background: white;
     margin: 1% 4%;
@@ -329,6 +334,45 @@ nav li a:active::after {
 
 .team-text {
     text-align: center;
+}
+
+.about-contact a:hover,
+.about-contact a:hover::after {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #da0041;
+}
+
+@media all and (max-width: 600px) {
+    .about-contact {
+        font-size: 5em;
+    }
+
+    .about-contact p {
+        margin: 3%;
+        padding: 4%;
+    }
+
+    .about-contact h3 {
+        padding: 3%;
+    }
+
+    .about-contact div {
+        margin: 4% 2%;
+    }
+
+    .about-contact img {
+        width: 80%;
+        margin: 0 10%;
+    }
+
+    .about-contact li {
+        margin: 5% 0;
+    }
+
+    #long-email {
+        font-size: 0.8em;
+    }
 }
 
 

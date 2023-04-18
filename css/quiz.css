@@ -94,6 +94,11 @@ button {
 
 @media all and (max-width: 600px) {
 
+    .position-wrapper {
+        background-image: none;
+        background-color: black;
+    }
+
     main {
         font-size: 3em;
     }
