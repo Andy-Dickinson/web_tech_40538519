@@ -291,6 +291,48 @@ nav li a:active::after {
 
 
 
+/* ---------------------------- about-contact ------------------------------ */
+
+.about-contact h2 {
+    text-align: center;
+}
+
+.about-contact h3 {
+    margin: 0;
+    font-size: 1.3em;
+    padding: 1% 2%;
+}
+
+.about-contact p, .about-contact ul {
+    margin: 0;
+    font-size: 1.3em;
+    padding: 1% 2%;
+    padding-top: 0.5%;
+}
+
+.about-contact li {
+    list-style-type: none;
+    padding: 1%;
+    padding-top: 0;
+}
+
+.about-contact div {
+    background: white;
+    margin: 1% 4%;
+}
+
+.about-contact img {
+    display: block;
+    margin: 0 36vw;
+    width: 20vw;
+}
+
+.team-text {
+    text-align: center;
+}
+
+
+
 /* ----------------------------- list-section ------------------------------ */
 
 #list-section {
@@ -317,6 +359,7 @@ nav li a:active::after {
     text-align: left;
     padding: 1%;
     margin: 0;
+    padding-left: 3%;
     background-color: white;
 }
 
