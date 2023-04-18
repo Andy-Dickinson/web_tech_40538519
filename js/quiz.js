@@ -60,11 +60,11 @@ var questions = {"bank":[
     },
     {
         "question":"To cook pasta 'al dente' perfectly, the texture should be?", 
-        "answers":["Crunchy and Crispy", "Moist and Soft", "Tender and Firm", "Charred", 2]
+        "answers":["Crunchy & Crisp", "Moist & Soft", "Tender & Firm", "Charred", 2]
     },
     {
         "question":"'Au jus' is a culinary term originated from France. It loosely means 'cooked in' what?", 
-        "answers":["Wine", "Honey", "Natural Juices", "Flour and Water", 2]
+        "answers":["Wine", "Honey", "Natural Juices", "Flour & Water", 2]
     },
     {
         "question":"What is done when zesting a citrus fruit?", 
@@ -80,7 +80,7 @@ var questions = {"bank":[
     },
     {
         "question":"'Beurre Blanc' is a sauce made from what main ingredients?", 
-        "answers":["Butter and Flour", "White Wine, Shallots, and Butter", "Vinegar, Sugar, and Flour", "Cream and Butter", 1]
+        "answers":["Butter & Flour", "White Wine, Shallots & Butter", "Vinegar, Sugar & Flour", "Cream & Butter", 1]
     },
     {
         "question":"What is the culinary term for improving the presentation of a dish by decorating with ingredients?", 
