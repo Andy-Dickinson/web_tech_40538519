@@ -1,5 +1,9 @@
 /* Note default.js is also required as this file makes use of functions within */
 
+var original_portions_selected;
+var original_ingredient_quantities = [];
+var original_ingedient_units = [];
+var original_unit;
 
 /* Sets recipe image path, href for anchor to ingredients from other recipes, and 
 variable storing current selections from json obj data */

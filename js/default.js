@@ -1,7 +1,4 @@
-var original_portions_selected;
-var original_ingredient_quantities = [];
-var original_ingedient_units = [];
-var original_unit;
+
 
 /* Creates a list of clickable images from the list in directory.json file.
 Attribute and filter are optional parameters, if passed, will build from only those 
